@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta
+      name="author"
+      content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
+    />
+    <meta name="generator" content="Jekyll v3.8.5" />
+    <title>إختبار قبلي</title>
+
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/bootstrap-datetimepicker.css" rel="stylesheet" />
+
+    <style>
+      input,
+      .Question {
+        margin-top: 1em;
+        font-family: "Tajawal", sans-serif;
+      }
+
+      table {
+        font-family: "Tajawal", sans-serif;
+      }
+
+      .note {
+        font-family: "Tajawal", sans-serif;
+      }
+
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="css/cover.css" rel="stylesheet" />
+  </head>
+
+  <body class="text-center">
+    <div
+      class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column"
+      id="top"
+    >
+      <header class="masthead mb-auto">
+        <div class="inner">
+          <h3 class="masthead-brand">الحوسبة السحابية</h3>
+          <nav class="nav nav-masthead justify-content-center">
+            <a class="nav-link ml-3 " href="index.html">اجراء الاختبار</a>
+            <a class="nav-link ml-3 active " href="results.html">النتائج</a>
+            <a class="nav-link" href="files/My_CV.pdf" target="_blank"
+              >نبذة عن المدرب</a
+            >
+            <a
+              class="nav-link"
+              href="https://api.whatsapp.com/send?phone=966530004407"
+              target="_blank"
+              >للتواصل</a
+            >
+          </nav>
+        </div>
+      </header>
+      <div class="container" id="message"></div>
+      <main role="main" class="inner cover mt-5">
+        <h1 class="cover-heading mb-4">نتائج الإختبار القبلي</h1>
+
+        <table id="resultTable" class="table table-sm table-dark">
+          <thead>
+            <tr>
+              <th scope="col">الاسم</th>
+              <th scope="col">الوظيفة</th>
+              <th scope="col">الدرجة</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </main>
+
+      <footer class="mastfoot mt-auto">
+        <div class="inner">
+          <p>
+            تم التصميم والتطوير من قبل
+            <a href="https://github.com/abdulaziz007">عبدالعزيز البيضاني</a>
+            <a href="https://twitter.com/abdulaziz003">@abdulaziz</a>.
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="js/result.js"></script>
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/momentjs.js"></script>
+
+    <script src="js/moment-with-locales.js"></script>
+    <script src="js/moment-hijri.js"></script>
+    <script src="js/bootstrap-hijri-datetimepicker.js"></script>
+  </body>
+</html>

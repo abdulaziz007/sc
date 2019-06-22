@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Jekyll v3.8.5">
+  <title>إختبار قبلي</title>
+
+
+  <link href="css/bootstrap.css" rel="stylesheet" />
+  <link href="css/bootstrap-datetimepicker.css" rel="stylesheet" />
+
+  <style>
+    input, .Question {
+      margin-top: 1em;
+      font-family: 'Tajawal', sans-serif;
+    }
+
+    table {
+      font-family: 'Tajawal', sans-serif;
+
+    }
+
+    .note {
+      font-family: 'Tajawal', sans-serif;
+    }
+
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+  <!-- Custom styles for this template -->
+  <link href="css/cover.css" rel="stylesheet">
+</head>
+
+<body class="text-center">
+  <div class="loader" id="loader" hidden>
+    <h2>جاري الارسال ...</h2>
+  </div>
+  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column" id="top">
+    <header class="masthead mb-auto">
+      <div class="inner">
+        <h3 class="masthead-brand">الحوسبة السحابية</h3>
+        <nav class="nav nav-masthead justify-content-center">
+          <a class="nav-link ml-3 active" href="index.html">اجراء الاختبار</a>
+          <a class="nav-link ml-3 " href="results.html">النتائج</a>
+          <a class="nav-link" href="files/MyCV.pdf" target="_blank">نبذة عن المدرب</a>
+          <a class="nav-link" href="https://api.whatsapp.com/send?phone=966530004407" target="_blank">للتواصل</a>
+        </nav>
+      </div>
+    </header>
+    <div class="container" id="message">
+
+    </div>
+    <main role="main" class="inner cover mt-5">
+      <h1 class="cover-heading">الإختبار القبلي
+        <small>📌</small>
+      </h1>
+      <p class="lead">اختر الاجابة الصحيحة فيما يلي</p>
+      <div class="lead">
+        <form id="resetForm" action="javascript:;" onsubmit="insert_value()">
+
+          <input id="name" class="input-group" type="text" placeholder="الاسم" required autofocus>
+          <select id="job" class="custom-select mt-3 note" id="inputGroupSelect02" required>
+            <option value="">اختر العمل الحالي</option>
+            <option value="معلم">معلم</option>
+            <option value="وكيل">وكيل</option>
+            <option value="قائد">قائد</option>
+          </select>
+          <input id="phone" class="input-group" type="text" pattern="^[0-9\.\-\/]+$" placeholder="رقم الجوال" title="ادخل رقم جوال صحيح"
+            required>
+          <input id="email" class="input-group mb-4" type="email" placeholder="البريد الالكتروني" title="ادخل بريد إلكتروني صحيح"
+            required>
+
+
+          
+          <div class="Question">
+            <h4 class="text-right mb-2">1- الحوسبة السحابية هي:</h4>
+            <div class="form-check form-check-inline sub-Q">
+              <input class="form-check-input ml-2" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required>
+              <label class="form-check-label" for="inlineRadio1">الخدمات الحاسوبية المتكاملة</label>
+            </div>
+            <div class="form-check form-check-inline sub-Q">
+              <input class="form-check-input ml-2" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+              <label class="form-check-label" for="inlineRadio2">مساحة تخزينية</label>
+            </div>
+            <div class="form-check form-check-inline sub-Q">
+              <input class="form-check-input ml-2" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+              <label class="form-check-label" for="inlineRadio3">تطبيقات تواصل اجتماعي</label>
+            </div>
+            <div class="form-check form-check-inline sub-Q">
+              <input class="form-check-input ml-2" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
+              <label class="form-check-label" for="inlineRadio4">اجهزة معقدة</label>
+            </div>
+          </div>
+          
+          <div class="Question mt-2">
+            <h4 class="text-right mb-2">2- من مواقع التخزين السحابي:</h4>
+            <div class="form-check form-check-inline sub-Q">
+              <input class="form-check-input ml-2" type="radio" name="inlineRadioOptions2" id="inlineRadio1" value="option1" required>
+              <label class="form-check-label" for="inlineRadio1">مستندات Google Documents</label>
+            </div>
+            <div class="form-check form-check-inline sub-Q">
+              <input class="form-check-input ml-2" type="radio" name="inlineRadioOptions2" id="inlineRadio2" value="option2">
+              <label class="form-check-label" for="inlineRadio2">Google Drive</label>
+            </div>
+            <div class="form-check form-check-inline sub-Q">
+              <input class="form-check-input ml-2" type="radio" name="inlineRadioOptions2" id="inlineRadio3" value="option3">
+              <label class="form-check-label" for="inlineRadio3">جداول البيانات Google Sheets</label>
+            </div>
+            <div class="form-check form-check-inline sub-Q">
+              <input class="form-check-input ml-2" type="radio" name="inlineRadioOptions2" id="inlineRadio4" value="option4">
+              <label class="form-check-label" for="inlineRadio4">استبانات Google Forms</label>
+            </div>
+          </div>
+
+          <div class="Question mt-2">
+            <h4 class="text-right mb-2">3- يمكن انشاء اختبارات آلية التصحيح من خلال:</h4>
+            <div class="form-check form-check-inline sub-Q">
+              <input class="form-check-input ml-2" type="radio" name="inlineRadioOptions3" id="inlineRadio1" value="option1" required>
+              <label class="form-check-label" for="inlineRadio1">مستندات Google Documents</label>
+            </div>
+            <div class="form-check form-check-inline sub-Q">
+              <input class="form-check-input ml-2" type="radio" name="inlineRadioOptions3" id="inlineRadio2" value="option2">
+              <label class="form-check-label" for="inlineRadio2">Google Drive</label>
+            </div>
+            <div class="form-check form-check-inline sub-Q">
+              <input class="form-check-input ml-2" type="radio" name="inlineRadioOptions3" id="inlineRadio3" value="option3">
+              <label class="form-check-label" for="inlineRadio3">جداول البيانات Google Sheets</label>
+            </div>
+            <div class="form-check form-check-inline sub-Q">
+              <input class="form-check-input ml-2" type="radio" name="inlineRadioOptions3" id="inlineRadio4" value="option4">
+              <label class="form-check-label" for="inlineRadio4">استبانات Google Forms</label>
+            </div>
+          </div>
+          
+          <div class="Question mt-2">
+            <h4 class="text-right mb-2">4- يمكن للحوسبة السحابية أن تدعم التعلم التعاوني:</h4>
+            <div class="form-check form-check-inline sub-Q">
+              <input class="form-check-input ml-2" type="radio" name="inlineRadioOptions4" id="inlineRadio1" value="option1" required>
+              <label class="form-check-label" for="inlineRadio1">صح</label>
+            </div>
+            <div class="form-check form-check-inline sub-Q">
+              <input class="form-check-input ml-2" type="radio" name="inlineRadioOptions4" id="inlineRadio2" value="option2">
+              <label class="form-check-label" for="inlineRadio2">خطأ</label>
+            </div>
+          </div>
+          
+          <div class="Question mt-2">
+            <h4 class="text-right mb-2">5- يمكن الاستفادة من جميع خدمات الحوسبة السحابية بدون توفر انترنت:</h4>
+            <div class="form-check form-check-inline sub-Q">
+              <input class="form-check-input ml-2" type="radio" name="inlineRadioOptions5" id="inlineRadio1" value="option1" required>
+              <label class="form-check-label" for="inlineRadio1">صح</label>
+            </div>
+            <div class="form-check form-check-inline sub-Q">
+              <input class="form-check-input ml-2" type="radio" name="inlineRadioOptions5" id="inlineRadio2" value="option2">
+              <label class="form-check-label" for="inlineRadio2">خطأ</label>
+            </div>
+          </div>
+          
+          <div class="Question mt-2">
+            <h4 class="text-right mb-2">6- التخزين السحابي هو أحد خدمات الحوسبة السحابية:</h4>
+            <div class="form-check form-check-inline sub-Q">
+              <input class="form-check-input ml-2" type="radio" name="inlineRadioOptions6" id="inlineRadio1" value="option1" required>
+              <label class="form-check-label" for="inlineRadio1">صح</label>
+            </div>
+            <div class="form-check form-check-inline sub-Q">
+              <input class="form-check-input ml-2" type="radio" name="inlineRadioOptions6" id="inlineRadio2" value="option2">
+              <label class="form-check-label" for="inlineRadio2">خطأ</label>
+            </div>
+          </div>
+
+          <div class="container text-right mt-5 note">
+            <small>عزيزي المتدرب</small>
+            <p id="dear-name"></p>
+            <p> سيتم ارسال تقرير بالاجابات للبريد</p>
+            <small id="email-conf"></small>
+          </div>
+
+          <p class="lead">
+            <a href="#top">
+              <button type="submit" class="btn btn-lg btn-secondary mt-5 note">ارسال الاجابات
+                <small>✅</small>
+              </button>
+            </a>
+          </p>
+        </form>
+
+      </div>
+      <div class="container" id="message-bottom">
+          
+      </div>
+
+    </main>
+
+
+    <footer class="mastfoot mt-auto">
+      <div class="inner">
+        <p>تم التصميم والتطوير من قبل
+          <a href="https://github.com/abdulaziz007">عبدالعزيز البيضاني</a>
+          <a href="https://twitter.com/abdulaziz003">@abdulaziz</a>.</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/jquery-3.3.1.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="js/momentjs.js"></script>
+  
+  <script src="js/moment-with-locales.js"></script>
+  <script src="js/moment-hijri.js"></script>
+  <script src="js/bootstrap-hijri-datetimepicker.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
